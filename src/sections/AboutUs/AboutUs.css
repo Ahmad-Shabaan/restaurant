@@ -1,0 +1,74 @@
+.app__about-us {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-black);
+  background-image: url('../../assets/G.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
+
+.app__about-us .p__cormorant {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 83.2px;
+  letter-spacing: 1.92px;
+  word-wrap: break-word;
+}
+
+.app__about-us .p__openSans {
+  margin-bottom: 1rem;
+}
+.app__about-us .app__wrapper-info:first-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.app__about-us .app__wrapper-img {
+  margin: 0 6rem;
+}
+.app__about-us-img {
+    width: 100px;
+    height: 800px;
+}
+
+@media screen and (max-width : 1150px) and (min-width : 901px){
+    .app__about-us .p__cormorant {
+        font-size: 45px;
+        line-height: 70px;
+      }
+    
+}
+@media screen and (max-width : 900px) {
+    .app__about-us {
+        flex-direction: column;
+        background-size: 500px;
+    }
+    .app__about-us-img {
+        width: 70px;
+        height: 700px;
+        margin: 2rem;
+      }
+
+      
+}
+
+@media screen and (max-width : 650px) {
+    .app__about-us {
+        background-size: 300px;
+    }
+    .app__about-us-img {
+        display: none;
+      }
+
+      .app__about-us .app__wrapper-info:first-child {
+        margin-bottom: 4rem;
+      }
+
+      .app__about-us .p__cormorant {
+        font-size: 45px;
+        line-height: 70px;
+      }
+}
