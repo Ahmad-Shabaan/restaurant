@@ -20,7 +20,7 @@ const Navbar = () => {
           <a href="#about">about</a>
         </li>
         <li className="p__openSans">
-          <a href="contactUs">contact us</a>
+          <a href="#contact">contact us</a>
         </li>
         <li className="p__openSans">
           <a href="#blog">blog</a>

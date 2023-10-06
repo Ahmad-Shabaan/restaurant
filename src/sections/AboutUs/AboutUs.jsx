@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <div className="app__about-us .app__bg section__padding" id="about">
       <div className="app__wrapper-info">
-        <SubHeading title={"about us"} color={"var(--color-golden)"}/>
+        <SubHeading title={"about us"}/>
         <p className="p__openSans">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra
           adipiscing ultrices vulputate posuere tristique. In sed odio nec
@@ -18,7 +18,7 @@ export const AboutUs = () => {
         <img src={images.knife} alt="knife" className="app__about-us-img" />
       </div>
       <div className="app__wrapper-info">
-        <SubHeading title={"Our History"} color={"var(--color-golden)"}/>
+        <SubHeading title={"Our History"}/>
         <p className="p__openSans">
           Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat.
           Risus placerat morbi volutpat habitasse interdum mi aliquam In sed

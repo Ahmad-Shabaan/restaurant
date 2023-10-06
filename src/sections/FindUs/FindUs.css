@@ -1,0 +1,18 @@
+.app__findUs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+@media screen and (max-width : 767px) {
+   .app__findUs{
+    flex-direction: column;
+    gap: 4rem;
+   } 
+   .app__findUs .app__wrapper_img{
+    margin: 0;
+   }
+}

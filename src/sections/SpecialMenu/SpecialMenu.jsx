@@ -1,5 +1,8 @@
 import React from "react";
-import { images, data } from "../../constants";
+import { images } from "../../constants";
+import {cocktails} from "../../constants/data"
+import {wines} from "../../constants/data"
+
 import "./SpecialMenu.css";
 import { SubHeading } from "../../components/SubHeading/SubHeading";
 import { SubMenu } from "../../components/SubMenu.jsx/SubMenu";
@@ -8,7 +11,6 @@ export const SpecialMenu = () => {
     <div className="app__special-menu section__padding app__bg">
       <SubHeading
         title={"Menu that fits you ~"}
-        color={"var(--color-white)"}
       />
       <h2 className="app__special-menu-h2 header-text__cormorant">
         Today’s Special
@@ -16,7 +18,7 @@ export const SpecialMenu = () => {
       <div className="app__special-menu-wrapper">
         <div className="app__wrapper_info">
           <h3 className="app__special-menu-h3">Wine & Beer</h3>
-          {data.wines.map((win, index) => {
+          {wines.map((win, index) => {
             return (
               <SubMenu
                 key={win.title + index}
@@ -32,7 +34,7 @@ export const SpecialMenu = () => {
         </div>
         <div className="app__wrapper_info">
           <h3 className="app__special-menu-h3">Wine & Beer</h3>
-          {data.cocktails.map((win, index) => {
+          {cocktails.map((win, index) => {
             return (
               <SubMenu
                 key={win.title + index}

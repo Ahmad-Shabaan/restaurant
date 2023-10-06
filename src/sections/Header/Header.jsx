@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <div className="app__header app__bg section__padding">
       <div className="app__wrapper_info">
-        <SubHeading title={"Chase the new Flavour"} color={"var(--color-white)"}/>
+        <SubHeading title={"Chase the new Flavour"}/>
         <h2 className="app__header-h2 p__cormorant ">The key to Fine dining</h2>
         <p className="app__header-p p__openSans">
           Sit tellus lobortis sed senectus vivamus molestie. Condimentum
