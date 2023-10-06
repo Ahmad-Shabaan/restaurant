@@ -60,19 +60,54 @@ const Navbar = () => {
             />
             <ul className="app__nav-smallScreen-links flex__center">
               <li className="p__openSans">
-                <a href="#home">home</a>
+                <a
+                  href="#home"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  home
+                </a>
               </li>
               <li className="p__openSans">
-                <a href="#about">about</a>
+                <a
+                  href="#about"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  about
+                </a>
               </li>
               <li className="p__openSans">
-                <a href="contactUs">contact us</a>
+                <a
+                  href="#contact"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  contact us
+                </a>
               </li>
               <li className="p__openSans">
-                <a href="#blog">blog</a>
+                <a
+                  href="#blog"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  blog
+                </a>
               </li>
               <li className="p__openSans">
-                <a href="#landing">landing</a>
+                <a
+                  href="#landing"
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  landing
+                </a>
               </li>
             </ul>
           </div>
