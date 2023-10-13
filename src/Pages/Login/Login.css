@@ -1,0 +1,285 @@
+.app__login {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  position: relative;
+  font-family: 'Open Sans';
+  min-height: 100vh;
+}
+.app__login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.84);
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.app__login-overlay_content {
+  position: relative;
+  flex-direction: column;
+  background-color: black;
+  padding: 3rem 4rem;
+  width: 600px;
+  border-radius: 1rem;
+  color: white;
+}
+.app__login-overlay_cross {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 23px;
+  color: var(--color-golden);
+}
+.app__login-overlay_notUserError{
+  position: absolute;
+  bottom: -10px;
+  width: fit-content;
+  text-align: center;
+  color: white;
+  background-color: #95854c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.app__login-overlay_content .findAccount {
+  height: 497px;
+  width: 100%;
+  text-align: left;
+}
+
+.app__login-overlay_content h2 {
+  font-size: 31px;
+  margin-bottom: 0.5rem;
+}
+.app__login-overlay_content p {
+  color: rgb(113, 118, 123);
+  font-size: 15px;
+  font-weight: 400;
+}
+.app__login-overlay input {
+  background-color: transparent;
+  border: 1px solid rgb(113, 118, 123);
+  border-radius: 4px;
+  margin-top: 2rem;
+  padding: 1rem 0 1rem 0.5rem;
+  width: 100%;
+  color: white;
+}
+
+.app__login-log input::placeholder {
+  color: rgb(113, 118, 123);
+}
+
+.app__login-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 2rem;
+  color: white;
+}
+.app__login-toggle div {
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+.app__login-toggle .active {
+  background: linear-gradient(91deg, #dcca87 0%, #9a894d 53%, #685a29 100%);
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+.app__login-container {
+  width: 480px;
+  height: 796px;
+  position: relative;
+  z-index: 1;
+}
+.app__login-log {
+  width: 100%;
+  height: 100%;
+  padding-top: 97px;
+  padding-bottom: 47px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.14) 0%,
+      rgba(0, 0, 0, 0.14) 100%
+    ),
+    linear-gradient(
+      321deg,
+      rgba(191.25, 191.25, 191.25, 0.06) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  box-shadow: -8px 4px 5px rgba(0, 0, 0, 0.24);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px white solid;
+  backdrop-filter: blur(53px);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: inline-flex;
+}
+.app__login-log h2 {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: 0;
+}
+.app__login-log p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.app__login-log input {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  width: 100%;
+  color: white;
+}
+
+.app__login-log input::placeholder {
+  color: #ffffff;
+}
+
+.app__login-log_button,
+.app__login-overlay_content button {
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(91deg, #dcca87 0%, #9a894d 53%, #685a29 100%);
+}
+.app__login-overlay_content button {
+  background: none;
+  background-color: goldenrod;
+  border-radius: 30px;
+}
+.app__login-overlay_content button:disabled {
+  background-color: #787a7a;
+  cursor: auto;
+}
+.app__login-log_other {
+  margin-top: 1rem;
+  width: 100%;
+  color: #aaaaaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.app__login-log_other div {
+  flex: 1;
+  height: 1px;
+  background-color: #aaaaaa;
+}
+
+.app__login-log_socialMedia {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 87px;
+}
+.app__login-log_socialMedia svg {
+  cursor: pointer;
+  font-size: 40px;
+  color: white;
+  position: relative;
+}
+.app__login-log_socialMedia span {
+  margin: 0 18px;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.app__login-log_socialMedia span svg {
+  color: #1877f2;
+}
+
+.app__login-log_footer {
+  width: 100%;
+  text-align: center;
+}
+.app__login-log_footer p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.app__login-log_footer div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.app__login-log_footer span {
+  cursor: pointer;
+}
+.app__login-log_footer span:hover {
+  color: var(--color-golden);
+}
+.app__login-log_circleTop,
+.app__login-log_circleBottom {
+  position: absolute;
+  top: -30px;
+  left: -80px;
+  width: 302px;
+  height: 302px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #95854c 0%, #655415 100%);
+  z-index: -1;
+}
+
+.app__login-log_circleBottom {
+  width: 220px;
+  height: 220px;
+  top: 77%;
+  left: 66%;
+}
+
+@media screen and (max-width: 623px) {
+  .app__login {
+    padding: 4rem 2rem;
+  }
+  .app__login-container {
+    width: 100%;
+  }
+  .app__login-log {
+    padding-top: 97px;
+    padding-bottom: 47px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .app__login-log_circleTop,
+  .app__login-log_circleBottom {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .app__login {
+    padding: 4rem 1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .app__login-log_footer div {
+    flex-direction: column;
+  }
+}

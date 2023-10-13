@@ -17,6 +17,7 @@ export const Gallery = () => {
   ];
   const handleRightClick = () => {
     slideRef.current.scrollLeft += 300;
+
     // const scrollAmount = 300; // Adjust the scroll amount as needed
     // const currentScroll = slideRef.current.scrollLeft;
     // const newScroll = currentScroll + scrollAmount;

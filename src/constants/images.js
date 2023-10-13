@@ -20,6 +20,20 @@ import award05 from "../assets/award05.png";
 import sign from "../assets/sign.png";
 import quote from "../assets/quote.png";
 import gericht from "../assets/gericht.png";
+import drink01 from "../assets/drink01.jpg";
+import drink02 from "../assets/drink02.jpg";
+import drink03 from "../assets/drink03.jpg";
+import drink04 from "../assets/drink04.jpg";
+import drink05 from "../assets/drink05.jpg";
+import drink06 from "../assets/drink06.jpg";
+import drink07 from "../assets/drink07.jpg";
+
+import burger01 from "../assets/burger01.jpg";
+import burger02 from "../assets/burger02.jpg";
+import burger03 from "../assets/burger03.jpg";
+import burger04 from "../assets/burger04.jpg";
+import burger05 from "../assets/burger05.jpg";
+import burger06 from "../assets/burger06.jpg";
 
 export default {
   G,
@@ -44,4 +58,17 @@ export default {
   welcome,
   findus,
   laurels,
+  drink01,
+  drink02,
+  drink03,
+  drink04,
+  drink05,
+  drink06,
+  drink07,
+  burger01,
+  burger02,
+  burger03,
+  burger04,
+  burger05,
+  burger06,
 };

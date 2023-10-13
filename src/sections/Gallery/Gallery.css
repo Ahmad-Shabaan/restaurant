@@ -38,7 +38,7 @@
   flex-direction: row;
   width: max-content;
   overflow-x: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   -ms-overflow-style: none;
   scrollbar-width: none;
   padding: 5px 0;

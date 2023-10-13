@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import images from "../../constants/images";
-
+import { scroller } from "react-scroll";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-
+import { Link } from "react-router-dom";
+import { DataContext } from "../../App";
 const Navbar = () => {
+  const scrollOptions = {
+    duration: 800,
+    offset: -50,
+    smooth: "easeInOutCubic",
+  };
   const [toggleMenu, setToggleMenu] = useState(false);
+  const { isUser, handleLogout } = useContext(DataContext);
   return (
     <nav className="app__nav ">
       <div className="app__nav-logo">
@@ -14,30 +21,47 @@ const Navbar = () => {
       </div>
       <ul className="app__nav-links">
         <li className="p__openSans">
-          <a href="#home">home</a>
+          <a onClick={() => scroller.scrollTo("home", scrollOptions)}>home</a>
         </li>
         <li className="p__openSans">
-          <a href="#about">about</a>
+          <a onClick={() => scroller.scrollTo("about", scrollOptions)}>about</a>
         </li>
         <li className="p__openSans">
-          <a href="#contact">contact us</a>
+          <a onClick={() => scroller.scrollTo("contact", scrollOptions)}>
+            contact us
+          </a>
         </li>
         <li className="p__openSans">
-          <a href="#blog">blog</a>
+          {/* <a href="#blog">blog</a> */}
+          <a onClick={() => scroller.scrollTo("blog", scrollOptions)}>blog</a>
         </li>
         <li className="p__openSans">
-          <a href="#landing">landing</a>
+          <a onClick={() => scroller.scrollTo("landing", scrollOptions)}>
+            landing
+          </a>
         </li>
       </ul>
 
       <div className="app__nav-login">
-        <a className="p__openSans" href="login">
-          login/signUp
-        </a>
+        {isUser ? (
+          <Link
+            to={"/"}
+            className="p__openSans"
+            onClick={() => {
+              handleLogout();
+            }}
+          >
+            logout
+          </Link>
+        ) : (
+          <Link to={"/login"} className="p__openSans">
+            login/signUp
+          </Link>
+        )}
         <div />
-        <a className="p__openSans" href="/">
+        <Link to={"/book_table"} className="p__openSans">
           book table
-        </a>
+        </Link>
       </div>
 
       <div className="app__nav-smallScreen">
@@ -61,9 +85,9 @@ const Navbar = () => {
             <ul className="app__nav-smallScreen-links flex__center">
               <li className="p__openSans">
                 <a
-                  href="#home"
                   onClick={() => {
                     setToggleMenu(false);
+                    scroller.scrollTo("home", scrollOptions);
                   }}
                 >
                   home
@@ -71,9 +95,9 @@ const Navbar = () => {
               </li>
               <li className="p__openSans">
                 <a
-                  href="#about"
                   onClick={() => {
                     setToggleMenu(false);
+                    scroller.scrollTo("about", scrollOptions);
                   }}
                 >
                   about
@@ -81,9 +105,9 @@ const Navbar = () => {
               </li>
               <li className="p__openSans">
                 <a
-                  href="#contact"
                   onClick={() => {
                     setToggleMenu(false);
+                    scroller.scrollTo("contact us", scrollOptions);
                   }}
                 >
                   contact us
@@ -91,9 +115,9 @@ const Navbar = () => {
               </li>
               <li className="p__openSans">
                 <a
-                  href="#blog"
                   onClick={() => {
                     setToggleMenu(false);
+                    scroller.scrollTo("blog", scrollOptions);
                   }}
                 >
                   blog
@@ -101,9 +125,9 @@ const Navbar = () => {
               </li>
               <li className="p__openSans">
                 <a
-                  href="#landing"
                   onClick={() => {
                     setToggleMenu(false);
+                    scroller.scrollTo("landing", scrollOptions);
                   }}
                 >
                   landing

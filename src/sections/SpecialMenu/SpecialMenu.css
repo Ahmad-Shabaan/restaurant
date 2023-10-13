@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   color: white;
   margin-top: 2rem;
 }
@@ -20,7 +20,7 @@
 }
 .app__special-menu-img img {
   width: 100%;
-  height: auto;
+  height: 700px;
 }
 
 .app__special-menu-h3 {
@@ -36,14 +36,11 @@
   margin-bottom: 2rem;
 }
 
-@media screen and (max-width: 2000px) {
-  .app__special-menu-img {
-    width: 600px;
-  }
+/* @media screen and (max-width: 2000px) {
   .app__special-menu-img img {
-    height: 900px;
+    height: 700px;
   }
-}
+} */
 
 @media screen and (max-width: 1150px) {
   .app__special-menu-img {

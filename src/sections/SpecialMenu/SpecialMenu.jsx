@@ -17,7 +17,7 @@ export const SpecialMenu = () => {
       </h2>
       <div className="app__special-menu-wrapper">
         <div className="app__wrapper_info">
-          <h3 className="app__special-menu-h3">Wine & Beer</h3>
+          <h3 className="app__special-menu-h3">Sandwiches & Burger</h3>
           {wines.map((win, index) => {
             return (
               <SubMenu
@@ -33,7 +33,7 @@ export const SpecialMenu = () => {
           <img src={images.menu} alt="menu" />
         </div>
         <div className="app__wrapper_info">
-          <h3 className="app__special-menu-h3">Wine & Beer</h3>
+          <h3 className="app__special-menu-h3">Drink & Pizza</h3>
           {cocktails.map((win, index) => {
             return (
               <SubMenu
