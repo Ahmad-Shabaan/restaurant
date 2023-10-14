@@ -98,18 +98,6 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
           </button>
         </Form>
       </Formik>
-      {/* <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => {
-          setUsername(e.target.value);
-        }}
-      /> */}
-      {/* <input type="text" placeholder="Password" style={{ margin: "25px 0" }} /> */}
-      {/* <button className="app__login-log_button" style={{ margin: "0 0 14px" }}>
-        Login
-      </button> */}
       <div
         style={{
           width: "100%",

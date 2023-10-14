@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   color: white;
   margin-top: 2rem;
 }
@@ -35,13 +36,9 @@
   text-align: center;
   margin-bottom: 2rem;
 }
-
-/* @media screen and (max-width: 2000px) {
-  .app__special-menu-img img {
-    height: 700px;
-  }
-} */
-
+.app__special-menu-button {
+  display: none;
+}
 @media screen and (max-width: 1150px) {
   .app__special-menu-img {
     margin: 3rem 0;
@@ -57,10 +54,11 @@
   .app__special-menu-img {
     width: 100%;
   }
-
-  .app__special-menu-h3{
+  .app__special-menu-button {
+    display: block;
+  }
+  .app__special-menu-h3 {
     font-size: 30px;
     line-height: 45px;
-    
   }
 }

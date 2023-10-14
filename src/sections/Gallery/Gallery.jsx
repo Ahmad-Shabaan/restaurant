@@ -14,27 +14,13 @@ export const Gallery = () => {
     images.gallery02,
     images.gallery03,
     images.gallery04,
+    images.drink01,
+    images.drink04,
+    images.burger01,
+    images.burger04
   ];
   const handleRightClick = () => {
     slideRef.current.scrollLeft += 300;
-
-    // const scrollAmount = 300; // Adjust the scroll amount as needed
-    // const currentScroll = slideRef.current.scrollLeft;
-    // const newScroll = currentScroll + scrollAmount;
-
-    // // Use CSS transitions for smooth scrolling
-    // slideRef.current.style.scrollBehavior = 'smooth';
-
-    // // Scroll to the new position
-    // slideRef.current.scrollTo({
-    //   left: newScroll,
-    //   behavior: 'smooth',
-    // });
-
-    // // Reset the scroll behavior to auto after the animation
-    // slideRef.current.addEventListener('scroll', () => {
-    //   slideRef.current.style.scrollBehavior = 'auto';
-    // }, { once: true });
   };
 
   const handleLeftClick = () => {

@@ -4,6 +4,8 @@ import { scroller } from "react-scroll";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { HiOutlineLogout } from "react-icons/hi";
+import { CiUser } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../App";
 const Navbar = () => {
@@ -15,7 +17,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const { isUser, handleLogout } = useContext(DataContext);
   return (
-    <nav className="app__nav ">
+    <nav className="app__nav " id="myNav">
       <div className="app__nav-logo">
         <img src={images.gericht} alt="logo" />
       </div>
@@ -32,7 +34,6 @@ const Navbar = () => {
           </a>
         </li>
         <li className="p__openSans">
-          {/* <a href="#blog">blog</a> */}
           <a onClick={() => scroller.scrollTo("blog", scrollOptions)}>blog</a>
         </li>
         <li className="p__openSans">
@@ -65,6 +66,7 @@ const Navbar = () => {
       </div>
 
       <div className="app__nav-smallScreen">
+        {/* <CiUser color="#fff" fontSize={23} cursor={'pointer'} style={{marginRight:"10px"}}/> */}
         <GiHamburgerMenu
           color="#fff"
           fontSize={27}
@@ -73,6 +75,7 @@ const Navbar = () => {
           }}
           cursor={"pointer"}
         />
+
         {toggleMenu && (
           <div className="app__nav-smallScreen_overlay flex__center slide-bottom ">
             <MdOutlineRestaurantMenu
@@ -132,6 +135,45 @@ const Navbar = () => {
                 >
                   landing
                 </a>
+              </li>
+              <li className="p__openSans">
+                {/* <Link
+                  to={isUser ? "/login" : "/"}
+                  onClick={() => {
+                    setToggleMenu(false);
+                  }}
+                >
+                  {isUser ? (
+                    <p>
+                      Login <CiUser fontSize={23} />
+                    </p>
+                  ) : (
+                    <p>
+                      Logout <HiOutlineLogout fontSize={23} />
+                    </p>
+                  )}
+                </Link> */}
+
+                {isUser ? (
+                  <Link
+                    to={"/"}
+                    onClick={() => {
+                      setToggleMenu(false);
+                      handleLogout();
+                    }}
+                  >
+                    Logout&nbsp;<HiOutlineLogout fontSize={23} />
+                  </Link>
+                ) : (
+                  <Link
+                    onClick={() => {
+                      setToggleMenu(false);
+                    }}
+                    to={"/login"}
+                  >
+                    Login/Signup&nbsp;<CiUser fontSize={23} />
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

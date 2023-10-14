@@ -79,8 +79,8 @@
 
 .app__gallery-images_arrows {
   position: absolute;
-  width: 100%;
-  bottom: 10%;
+  width: 100px;
+  bottom: -50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,8 +90,9 @@
 
 .gallery__arrows-icon {
   color: var(--color-golden);
-  background-color: black;
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.34);
+  border: 1px solid var(--color-golden);
+  border-radius: 50%;
   cursor: pointer;
 }
 

@@ -1,17 +1,16 @@
 import React from "react";
 import { images } from "../../constants";
-import {cocktails} from "../../constants/data"
-import {wines} from "../../constants/data"
+import { cocktails } from "../../constants/data";
+import { wines } from "../../constants/data";
 
 import "./SpecialMenu.css";
 import { SubHeading } from "../../components/SubHeading/SubHeading";
 import { SubMenu } from "../../components/SubMenu.jsx/SubMenu";
+import { Link } from "react-router-dom";
 export const SpecialMenu = () => {
   return (
     <div className="app__special-menu section__padding app__bg">
-      <SubHeading
-        title={"Menu that fits you ~"}
-      />
+      <SubHeading title={"Menu that fits you ~"} />
       <h2 className="app__special-menu-h2 header-text__cormorant">
         Today’s Special
       </h2>
@@ -44,6 +43,11 @@ export const SpecialMenu = () => {
               />
             );
           })}
+        </div>
+        <div>
+          <Link to={"/book_table"} className="custom__button app__special-menu-button">
+            Book table
+          </Link>
         </div>
       </div>
     </div>

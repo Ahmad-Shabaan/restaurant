@@ -112,16 +112,6 @@
     }
   }
   
-  @media screen and (max-width: 2000px) {
-    /* .p__openSans {
-      font-size: 30px;
-      line-height: 50px;
-    } */
-    /* .p__cormorant {
-      font-size: 37px;
-      line-height: 67px;
-    } */
-  }
   @media screen and (max-width: 1150px) {
   }
   @media screen and (max-width: 650px) {

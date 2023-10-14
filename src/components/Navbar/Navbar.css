@@ -6,7 +6,9 @@
   justify-content: space-between;
   padding: 1rem 2rem;
 }
-
+.app__nav a{
+  cursor: pointer;
+}
 .app__nav-logo img {
   width: 150px;
 }

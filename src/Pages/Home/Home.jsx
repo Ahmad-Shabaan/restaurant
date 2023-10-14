@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar } from "../../components";
+import { GoUp } from "../../components/GoUp/GoUp";
 import "./Home.css";
 import {
   Header,
@@ -25,6 +26,7 @@ const Home = () => {
       <Gallery />
       <FindUs />
       <Footer />
+      <GoUp />
     </>
   );
 };

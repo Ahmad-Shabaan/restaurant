@@ -5,25 +5,55 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 }
-.app__shop-menu_nav{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.45);
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    padding: 0.5rem;
+.app__bookTable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 0.5rem 1rem;
 }
-.app__shop-menu_nav div {
-    width: 1px;
-    height: 25px;
-    margin: 0 5px;
-    background-color: var(--color-gray);
-  }
+.app_bookTable-nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+.app_bookTable-nav a:hover {
+  color: var(--color-golden);
+}
+.app_bookTable-nav a {
+  position: relative;
+}
+
+.app_bookTable-nav a::after {
+  content: 'Home';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-grey);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.app_bookTable-nav a:hover::after {
+  opacity: 1;
+}
+.app_bookTable-nav a:nth-child(3)::after {
+  content: 'Wishlist';
+}
+.app_bookTable-nav a:nth-child(2)::after {
+  content: 'Shopping';
+}
+.app_bookTable-nav a:last-child::after {
+  content: 'Logout';
+}
+
 .app__shop-menu-wrapper {
   width: 100%;
   display: flex;
@@ -52,17 +82,21 @@
   width: 100%;
   margin-bottom: 5rem;
   display: grid;
-  gap: 1rem 1rem;
+  gap: 20px 20px;
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-rows: repeat(2, auto);
 }
-.app__subMenu-burgers .app_bookMenu-loading:nth-child(5){
+.app__subMenu-burgers .app__bookMenu-loading:nth-child(5) {
   width: 100%;
-  height: 100%;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 3;
+}
+.app__subMenu-burgers
+  .app__bookMenu-loading:nth-child(5)
+  .app__bookMenu-loading_imgHolder {
+  height: calc(100% - 92px);
 }
 .app__subMenu-burgers div:nth-child(2) {
   grid-column-start: 3;
@@ -74,12 +108,12 @@
   width: 100%;
   margin-bottom: 2.5rem;
   display: grid;
-  gap: 1rem 1rem;
+  gap: 20px 20px;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(4, auto);
 }
 
-.app__subMenu-drinks .app_bookMenu-loading:nth-child(1){
+.app__subMenu-drinks .app__bookMenu-loading:nth-child(1) {
   width: 100%;
   height: 100%;
   grid-column-start: 3;
@@ -87,7 +121,11 @@
   grid-row-start: 1;
   grid-row-end: 3;
 }
-
+.app__subMenu-drinks
+  .app__bookMenu-loading:nth-child(1)
+  .app__bookMenu-loading_imgHolder {
+  height: calc(100% - 92px);
+}
 .app__subMenu-drinks div:nth-child(1) {
   grid-column-start: 2;
   grid-column-end: 3;
@@ -121,16 +159,16 @@
     grid-column-end: 3;
   }
 
-  .app__subMenu-burgers .app_bookMenu-loading:nth-child(5){
+  .app__subMenu-burgers .app__bookMenu-loading:nth-child(5) {
     grid-column-start: 2;
     grid-column-end: 3;
   }
 
-  .app__subMenu-drinks .app_bookMenu-loading:nth-child(1){
+  .app__subMenu-drinks .app__bookMenu-loading:nth-child(1) {
     grid-column-start: 2;
     grid-column-end: 3;
   }
-  .app__subMenu-drinks .app_bookMenu-loading:nth-child(13){
+  .app__subMenu-drinks .app__bookMenu-loading:nth-child(13) {
     height: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -139,7 +177,7 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 676px) {
   .app__shop-menu-h3 {
     font-size: 30px;
     line-height: 45px;
@@ -160,12 +198,16 @@
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .app__subMenu-burgers .app_bookMenu-loading:nth-child(5){
+  .app__subMenu-burgers .app__bookMenu-loading:nth-child(5) {
     grid-column-start: 1;
     grid-column-end: 2;
-    height: 200px;
   }
 
+  .app__subMenu-burgers
+    .app__bookMenu-loading:nth-child(5)
+    .app__bookMenu-loading_imgHolder {
+    height: 250px;
+  }
 
   .app__subMenu-burgers {
     gap: 3rem;
@@ -175,20 +217,31 @@
   .app__subMenu-burgers div:nth-child(2) {
     grid-column-start: 1;
     grid-column-end: 2;
-
   }
 
-  .app__subMenu-drinks .app_bookMenu-loading:nth-child(1){
+  .app__subMenu-drinks .app__bookMenu-loading:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 2;
   }
-  .app__subMenu-drinks .app_bookMenu-loading:nth-child(1){
-    height: 200px;
+  .app__subMenu-drinks
+    .app__bookMenu-loading:nth-child(1)
+    .app__bookMenu-loading_imgHolder {
+    height: 250px;
   }
-
-  .app__subMenu-drinks .app_bookMenu-loading:nth-child(13){
-    height: 200px;
+  .app__subMenu-drinks .app__bookMenu-loading:nth-child(13) {
     grid-column-start: 1;
     grid-column-end: 2;
+  }
+  .app__shop-menu {
+    margin-top: 79px;
+  }
+  .app__bookTable {
+    flex-direction: column;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+  }
+  .app__bookTable .app__nav-logo {
+    text-align: center;
   }
 }
