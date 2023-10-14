@@ -33,7 +33,7 @@ export const Login = () => {
       setNotUserError(true);
       setTimeout(() => {
         setNotUserError(false);
-      }, 1500);
+      }, 2000);
     }
   };
   const handleConfirmPassword = () => {
@@ -41,8 +41,6 @@ export const Login = () => {
       return ele.email === email;
     });
     user.password = password;
-
-    console.log(user);
     handleCheckUser();
     navigate("/book_table");
   };
@@ -129,7 +127,7 @@ export const Login = () => {
               handleForgetRef={handleForget}
             />
           ) : (
-            <Signup handleToggleClickRef={handleToggleClick} />
+            <Signup handleToggleClickRef={handleToggleClick} handleCheckUser={handleCheckUser}/>
           )}
         </div>
         <div className="app__login-log_circleTop" />

@@ -13,15 +13,15 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
   const [notUserError, setNotUserError] = useState(false);
 
   const LoginSchema = Yup.object().shape({
-    username: Yup.string().required("This field is required"),
-    password: Yup.string().required("This field is required"),
+    email: Yup.string().required("Email/phone is required"),
+    password: Yup.string().required("Password is required"),
   });
   const handleSubmit = (userObj, { resetForm }) => {
     if (
       users.find((user) => {
         return (
           user.password === userObj.password &&
-          user.username === userObj.username
+          user.email === userObj.email
         );
       })
     ) {
@@ -31,7 +31,7 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
       setNotUserError(true);
       setTimeout(() => {
         setNotUserError(false);
-      }, 1500);
+      }, 2000);
       resetForm();
     }
   };
@@ -45,7 +45,7 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
       <h2>Login</h2>
       <p>Glad you’re back.!</p>
       <Formik
-        initialValues={{ username: "", password: "" }}
+        initialValues={{ email: "", password: "" }}
         validationSchema={LoginSchema}
         onSubmit={handleSubmit}
       >
@@ -61,12 +61,12 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
           <div className="login__form-username">
             <Field
               type="text"
-              name="username"
-              placeholder="Username"
+              name="email"
+              placeholder="Email/phone"
               autoComplete={"off"}
             />
             <ErrorMessage
-              name="username"
+              name="email"
               component={"div"}
               className="login__form-username_errorMsg"
             />
