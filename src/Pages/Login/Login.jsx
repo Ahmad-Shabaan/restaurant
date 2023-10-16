@@ -15,7 +15,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const handleCheckUser = useContext(DataContext)
+  const handleCheckUser = useContext(DataContext);
   const handleForget = () => {
     setForgetPassword(true);
   };
@@ -46,7 +46,6 @@ export const Login = () => {
   };
   return (
     <div className="app__login">
-
       {/* Handle forget password */}
       {forgetPassword ? (
         <div className="app__login-overlay flex__center">
@@ -127,7 +126,10 @@ export const Login = () => {
               handleForgetRef={handleForget}
             />
           ) : (
-            <Signup handleToggleClickRef={handleToggleClick} handleCheckUser={handleCheckUser}/>
+            <Signup
+              handleToggleClickRef={handleToggleClick}
+              handleCheckUser={handleCheckUser}
+            />
           )}
         </div>
         <div className="app__login-log_circleTop" />

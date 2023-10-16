@@ -86,7 +86,7 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
             />
           </div>
           <div style={{ display:"flex", flexDirection:"row" , alignItems:"center" , marginBottom:"25px",color:"white"}}>
-            <input type="checkbox" defaultChecked name="remember" id="remember" style={{width:"1rem" , margin:'0 5px 0 0'}}/>
+            <input type="checkbox" defaultChecked name="remember" id="remember"/>
             <label htmlFor="remember"> Remember me</label>
           </div>
           <button

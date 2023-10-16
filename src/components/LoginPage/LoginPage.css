@@ -35,3 +35,9 @@
 .login__form-password_errorMsg {
   bottom: -6px;
 }
+
+input[type='checkbox'] {
+  width: 20px !important;
+  height: 15px;
+  margin: 0 5px 0 0 ;
+}
