@@ -1,0 +1,50 @@
+.app__loading {
+  background-color: rgba(128, 128, 128, 0.286);
+  border-radius: 20px;
+  padding: 1rem;
+}
+.app__loading-imgHolder {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--color-gold);
+
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 25%,
+    #e0e0e0 50%,
+    var(--color-gold) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s infinite;
+}
+.app__loading-infoHolder {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.app__loading-infoHolder div {
+  width: 90%;
+  height: 20px;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold) 25%,
+    #e0e0e0 50%,
+    var(--color-gold) 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 2s infinite;
+}
+.app__loading-infoHolder div:nth-child(2) {
+  width: 70%;
+}
+.app__loading-infoHolder div:nth-child(3) {
+  width: 50%;
+}

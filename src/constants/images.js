@@ -34,7 +34,7 @@ import burger03 from "../assets/burger03.jpg";
 import burger04 from "../assets/burger04.jpg";
 import burger05 from "../assets/burger05.jpg";
 import burger06 from "../assets/burger06.jpg";
-
+import Falastine from '../assets/11841.jpg';
 export default {
   G,
   bg,
@@ -71,4 +71,5 @@ export default {
   burger04,
   burger05,
   burger06,
+  Falastine,
 };

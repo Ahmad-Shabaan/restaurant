@@ -115,7 +115,7 @@
 
 .app__subMenu-drinks .app__bookMenu-loading:nth-child(1) {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;

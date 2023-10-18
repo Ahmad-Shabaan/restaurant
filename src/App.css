@@ -79,12 +79,16 @@
   width: 80%;
 }
 .app__bg {
-  background: url('./assets/bg.png');
+  background-image: url('./assets/bg.png');
+  background-color: black;
   background-position: center;
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
 }
+
+
+
 .slide-bottom {
   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

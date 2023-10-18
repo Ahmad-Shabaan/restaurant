@@ -254,6 +254,14 @@
   top: 77%;
   left: 66%;
 }
+.login__form-password_eye {
+  position: absolute;
+  top: 44%;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
 
 @media screen and (max-width: 623px) {
   .app__login {

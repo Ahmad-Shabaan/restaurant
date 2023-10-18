@@ -5,8 +5,11 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { users } from "../../constants";
 import { useNavigate } from "react-router-dom";
+import { PiEyeClosedBold, PiEyeBold } from "react-icons/pi";
+
 export const Signup = ({ handleToggleClickRef, handleCheckUser }) => {
   const navigate = useNavigate();
+
   const SignupSchema = Yup.object().shape({
     username: Yup.string().required("Username is required"),
     email: Yup.string().required("Email/phone is required"),
@@ -16,6 +19,9 @@ export const Signup = ({ handleToggleClickRef, handleCheckUser }) => {
       .required("Confirm Password is required"),
   });
   const [alreadyUser, setAlreadyUser] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const initialValues = {
     username: "",
     email: "",
@@ -82,11 +88,20 @@ export const Signup = ({ handleToggleClickRef, handleCheckUser }) => {
           </div>
           <div className="login__form-username">
             <Field
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               name="password"
               autoComplete={"off"}
             />
+            <span
+              className="login__form-password_eye"
+              style={{ top: "20%" }}
+              onClick={() => {
+                setShowPassword(!showPassword);
+              }}
+            >
+              {showPassword ? <PiEyeBold /> : <PiEyeClosedBold />}
+            </span>
             <ErrorMessage
               name="password"
               component={"div"}
@@ -95,11 +110,20 @@ export const Signup = ({ handleToggleClickRef, handleCheckUser }) => {
           </div>
           <div className="login__form-username">
             <Field
-              type="password"
+              type={showConfirmPassword ? "text" : "password"}
               placeholder="Confirm Password"
               name="confirmPassword"
               autoComplete={"off"}
             />
+            <span
+              className="login__form-password_eye"
+              style={{ top: "20%"}}
+              onClick={() => {
+                setShowConfirmPassword(!showConfirmPassword);
+              }}
+            >
+              {showConfirmPassword ? <PiEyeBold /> : <PiEyeClosedBold />}
+            </span>
             <ErrorMessage
               name="confirmPassword"
               component={"div"}

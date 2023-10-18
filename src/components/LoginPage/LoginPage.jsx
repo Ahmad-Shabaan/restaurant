@@ -6,12 +6,13 @@ import * as Yup from "yup";
 import "./LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../../App";
+import { PiEyeClosedBold, PiEyeBold } from "react-icons/pi";
 import { users } from "../../constants";
 export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
   const handleCheckUser = useContext(DataContext);
   const navigate = useNavigate();
   const [notUserError, setNotUserError] = useState(false);
-
+  const [showPassword, setShowPassword] = useState(false);
   const LoginSchema = Yup.object().shape({
     email: Yup.string().required("Email/phone is required"),
     password: Yup.string().required("Password is required"),
@@ -20,8 +21,7 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
     if (
       users.find((user) => {
         return (
-          user.password === userObj.password &&
-          user.email === userObj.email
+          user.password === userObj.password && user.email === userObj.email
         );
       })
     ) {
@@ -73,20 +73,41 @@ export const LoginPage = ({ handleToggleClickRef, handleForgetRef }) => {
           </div>
           <div className="login__form-password">
             <Field
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Password"
               style={{ margin: "25px 0 12px" }}
               autoComplete="off"
             />
+            <span
+              className="login__form-password_eye"
+              onClick={() => {
+                setShowPassword(!showPassword);
+              }}
+            >
+              {showPassword ? <PiEyeBold /> : <PiEyeClosedBold />}
+            </span>
             <ErrorMessage
               name="password"
               component={"div"}
               className="login__form-password_errorMsg"
             />
           </div>
-          <div style={{ display:"flex", flexDirection:"row" , alignItems:"center" , marginBottom:"25px",color:"white"}}>
-            <input type="checkbox" defaultChecked name="remember" id="remember"/>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              marginBottom: "25px",
+              color: "white",
+            }}
+          >
+            <input
+              type="checkbox"
+              defaultChecked
+              name="remember"
+              id="remember"
+            />
             <label htmlFor="remember"> Remember me</label>
           </div>
           <button
