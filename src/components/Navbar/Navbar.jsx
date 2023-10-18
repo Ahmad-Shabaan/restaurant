@@ -66,7 +66,6 @@ const Navbar = () => {
       </div>
 
       <div className="app__nav-smallScreen">
-        {/* <CiUser color="#fff" fontSize={23} cursor={'pointer'} style={{marginRight:"10px"}}/> */}
         <GiHamburgerMenu
           color="#fff"
           fontSize={27}
@@ -110,7 +109,7 @@ const Navbar = () => {
                 <a
                   onClick={() => {
                     setToggleMenu(false);
-                    scroller.scrollTo("contact us", scrollOptions);
+                    scroller.scrollTo("contact", scrollOptions);
                   }}
                 >
                   contact us
@@ -137,23 +136,6 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="p__openSans">
-                {/* <Link
-                  to={isUser ? "/login" : "/"}
-                  onClick={() => {
-                    setToggleMenu(false);
-                  }}
-                >
-                  {isUser ? (
-                    <p>
-                      Login <CiUser fontSize={23} />
-                    </p>
-                  ) : (
-                    <p>
-                      Logout <HiOutlineLogout fontSize={23} />
-                    </p>
-                  )}
-                </Link> */}
-
                 {isUser ? (
                   <Link
                     to={"/"}
